@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 20% 97%;
+    --foreground: 200 25% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 14%;
+    --primary: 168 55% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 168 55% 52%;
+    --secondary: 150 15% 93%;
+    --secondary-foreground: 200 25% 20%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 150 10% 92%;
+    --muted-foreground: 200 10% 46%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 168 55% 38%;
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(168 55% 38%), hsl(168 55% 52%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(150 20% 98%));
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%), hsl(25 95% 53%));
+    --gradient-progress: linear-gradient(90deg, hsl(168 55% 38%), hsl(142 71% 45%));
+    --gradient-bg: linear-gradient(180deg, hsl(150 20% 97%), hsl(168 20% 94%));
+
+    --shadow-card: 0 1px 3px hsl(200 25% 14% / .06), 0 4px 12px hsl(200 25% 14% / .04);
+    --shadow-elevated: 0 4px 16px hsl(200 25% 14% / .08), 0 8px 32px hsl(200 25% 14% / .04);
+    --shadow-glow: 0 0 20px hsl(168 55% 38% / .15);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  .gradient-progress {
+    background: var(--gradient-progress);
+  }
+  .gradient-bg {
+    background: var(--gradient-bg);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
